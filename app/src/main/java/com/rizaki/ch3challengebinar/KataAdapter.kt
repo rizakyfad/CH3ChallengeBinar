@@ -13,15 +13,6 @@ class KataAdapter (private val list: Array<String>): RecyclerView.Adapter<KataAd
         return CardViewHolder(binding)
 
     }
-    override fun onBindViewHolder(holder: KataAdapter.CardViewHolder, position:Int){
-        holder.bind(list)
-        holder.itemView.setOnClickListener {
-            val uri = Uri.parse("https://www.google.com/search?q=${list[position]}")
-            val intent = Intent(Intent.ACTION_VIEW, uri)
-            it.context.startActivity(intent)
-        }
-    }
-
     override fun getItemCount() = list.size
 
     class CardViewHolder(private val binding: ItemViewBinding): RecyclerView.ViewHolder(binding.root) {
@@ -31,4 +22,14 @@ class KataAdapter (private val list: Array<String>): RecyclerView.Adapter<KataAd
             }
         }
     }
+    override fun onBindViewHolder(holder: KataAdapter.CardViewHolder, position:Int){
+        holder.bind(list)
+        holder.itemView.setOnClickListener {
+            val uri = Uri.parse("https://www.google.com/search?q=${list[position]}")
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            it.context.startActivity(intent)
+        }
+    }
+
+
 }
