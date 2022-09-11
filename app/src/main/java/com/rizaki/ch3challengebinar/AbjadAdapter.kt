@@ -13,8 +13,8 @@ class AbjadAdapter(private val list: ArrayList<AbjadModel>) :
     class CardViewHolder(private val binding: ItemViewBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(list: AbjadModel, onItemClicked: OnItemClickCallback){
-            binding.btnText.text = list.abjad
-            binding.btnText.setOnClickListener {
+            binding.TombolText.text = list.abjad
+            binding.TombolText.setOnClickListener {
                 onItemClicked.onItemClicked(list.kata)
             }
         }

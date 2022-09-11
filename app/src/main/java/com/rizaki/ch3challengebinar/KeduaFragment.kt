@@ -30,7 +30,7 @@ class KeduaFragment : Fragment() {
 
         val mData = KeduaFragmentArgs.fromBundle(arguments as Bundle).name
 
-        binding.rcvWords.apply {
+        binding.Kata.apply {
             adapter = KataAdapter(mData)
             layoutManager = LinearLayoutManager(activity)
         }

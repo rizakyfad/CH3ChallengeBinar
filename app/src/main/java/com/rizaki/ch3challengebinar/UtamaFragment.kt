@@ -25,7 +25,7 @@ class UtamaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.rcvAlphabet.apply {
+        binding.viewAbjad.apply {
             layoutManager = LinearLayoutManager(activity)
 
             val mAdapter= AbjadAdapter(list)

@@ -27,7 +27,7 @@ class KataAdapter (private val list: Array<String>): RecyclerView.Adapter<KataAd
     class CardViewHolder(private val binding: ItemViewBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(list: Array<String>){
             binding.apply {
-                btnText.text = list[position]
+                TombolText.text = list[position]
             }
         }
     }
